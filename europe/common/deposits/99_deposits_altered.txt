@@ -176,8 +176,8 @@ d_dayside_farm = {
 			owner = { has_country_flag = tidal_lock_knowledge }
 			NOT = { owner = { has_ascension_perk = ap_mastery_of_nature } }
 		}
-		district_generator_max = 12
-		planet_jobs_energy_produces_mult = 0.60
+		district_generator_max = 6
+		planet_jobs_energy_produces_mult = 0.30
 	}
 
 	# Tidal Lock knowledge turns dayside farms twice as powerful
