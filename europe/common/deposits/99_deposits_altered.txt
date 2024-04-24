@@ -162,6 +162,8 @@ d_dayside_farm = {
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
+			owner = { has_ascension_perk = ap_mastery_of_nature }
+			NOT = { owner = { has_country_flag = tidal_lock_knowledge } }
 		}
 		district_generator_max = 6
 		mult = value:district_amount_mastery_of_nature
@@ -172,10 +174,22 @@ d_dayside_farm = {
 		potential = {
 			exists = owner
 			owner = { has_country_flag = tidal_lock_knowledge }
+			NOT = { owner = { has_ascension_perk = ap_mastery_of_nature } }
 		}
-		district_generator_max = 6
-		mult = value:district_amount_mastery_of_nature
-		planet_jobs_energy_produces_mult = 0.30
+		district_generator_max = 12
+		planet_jobs_energy_produces_mult = 0.60
+	}
+
+	# Tidal Lock knowledge turns dayside farms twice as powerful
+	# Mastery of Nature gives a further 50% increase to the number of districts
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = tidal_lock_knowledge }
+			owner = { has_ascension_perk = ap_mastery_of_nature }
+		}
+		district_generator_max = 18
+		planet_jobs_energy_produces_mult = 0.60
 	}
 
 	drop_weight = {
